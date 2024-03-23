@@ -10,7 +10,7 @@ public class QuizzesController : ControllerBase
     [HttpGet("first-test")]
     public Task<QuestionModel[]> GetFirstTest()
     {
-        return new Task<QuestionModel[]>(() => new QuestionModel[]
+        return Task.FromResult(new QuestionModel[]
         {
             new()
             {
