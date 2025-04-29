@@ -20,4 +20,5 @@ app.UseSwaggerUI();
 
 app.MapControllers();
 
-app.Run("http://localhost:8080");
+builder.WebHost.UseUrls(Environment.GetEnvironmentVariable("APP_URL") ?? "http://localhost:5000");
+app.Run();
